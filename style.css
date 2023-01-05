@@ -193,6 +193,7 @@ button {
 @media screen and (min-width: 992px) {
 
     body {
+        background-color: #0C122C;
         background-image: url(./images/bg-desktop.png);
         background-size: contain;
         background-position: bottom;
