@@ -189,3 +189,54 @@ button {
     mix-blend-mode: normal;
     opacity: 0.5;
 }
+
+@media screen and (min-width: 992px) {
+
+    body {
+        background-image: url(./images/bg-desktop.png);
+        background-size: contain;
+        background-position: bottom;
+    }
+
+    main {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .actions {
+        max-width: 35rem;
+    }
+
+    .storage {
+        max-width: 54rem;
+        padding: 4rem;
+        transform: translateY(2.4rem);
+    }
+
+    .storage__used {
+        text-align: left;
+    }
+
+    .storage__left {
+        inset-block-end: 100%;
+        inset-inline-start: 32.1rem;
+        transform: translate(0, 50%);
+        border-bottom-right-radius: 0;
+    }
+
+    .storage__left::after {
+        content: "";
+        position: absolute;
+        inset-block-end: 0;
+        inset-inline-end: 0;
+        transform: translateY(75%);
+
+        width: 2.2rem;
+        height: 2.2rem;
+        z-index: 2;
+        background: #FFFFFF;
+        box-shadow: 0px 7.5rem 10rem rgba(0, 0, 0, 0.24776);
+
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+}
