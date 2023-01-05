@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-  <title>Frontend Mentor | Fylo data storage component</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Fylo data storage component</title>
+  </head>
 
+  <body>
+    <main>
+      <section class="actions">
+        <picture>
+          <img class="logo" src="./images/logo.svg" alt="Fylo" />
+        </picture>
 
-  <main>
+        <ul class="action__list">
+          <li class="action__item">
+            <button class="action__button">
+              <img src="./images/icon-document.svg" alt="Document" />
+            </button>
+          </li>
+          <li class="action">
+            <button class="action__button">
+              <img src="./images/icon-folder.svg" alt="Folder" />
+            </button>
+          </li>
+          <li class="action">
+            <button class="action__button">
+              <img src="./images/icon-upload.svg" alt="Upload" />
+            </button>
+          </li>
+        </ul>
+      </section>
 
-    <section>
-      <img src="./images/logo.svg" alt="Fylo">
+      <section class="storage">
+        <p class="storage__used">You've used <strong>815 GB</strong> of your storage</p>
 
-      <ul class="actions">
-        <li class="action">
-          <img src="./images/icon-document.svg" alt="Document">
-        </li>
-        <li class="action">
-          <img src="./images/icon-folder.svg" alt="Folder">
-        </li>
-        <li class="action">
-          <img src="./images/icon-upload.svg" alt="">
-        </li>
-      </ul>
-    </section>
+        <p class="storage__left"><strong>185</strong> <small>GB Left</small></p>
 
-    <section>
-      <p>You've used 815 GB of your storage</p>
+        <div role="progressbar" aria-current="800" aria-valuemin="0" aria-valuemax="1000" class="storage__progress-bar">
+          <span role="presentation" class="storage__progress-value"></span>
+        </div>
 
-      <strong>185 GB Left</strong>
-
-      <progress max="1000" value="800">
-
-      </progress>
-
-      <small>0 GB</small>
-      <small>1000 GB</small>
-    </section>
-  </main>
-</body>
+        <div class="storage__values">
+          <small class="storage__value">0 GB</small>
+          <small class="storage__value">1000 GB</small>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
